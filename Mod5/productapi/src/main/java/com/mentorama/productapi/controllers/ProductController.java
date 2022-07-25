@@ -3,6 +3,7 @@ package com.mentorama.productapi.controllers;
 import com.mentorama.productapi.models.Product;
 import com.mentorama.productapi.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +17,7 @@ public class ProductController {
     private ProductService productService;
 
 
+    @GetMapping
     public List<Product> findAll() {
         return productService.findAll();
     }
