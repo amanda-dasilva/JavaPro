@@ -51,7 +51,7 @@ public class ProductController {
 
         ProductEntity productEntity = new ProductEntity();
         productEntity.setDescription(productEntity.getDescription());
-        productEntity.setValue(productEntity.getValue());
+        productEntity.setValue(productEntity.getValue());   
         productEntity.setDepartment(
                 departmentRepository.findById(product.getDepartment().getId())
                 .orElse(null)
